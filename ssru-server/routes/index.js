@@ -73,9 +73,8 @@ router.post('/data/post', function(req, res, next){
   let body = req.body;
   let url = body.url;
   let message = body.message;
-  let like = body.like;
 
-  let strQuery = `INSERT post(url, message, like) VALUES('${url}', '${message}', '${like}')`;
+  let strQuery = `INSERT post(url, message) VALUES('${url}', '${message}')`;
 
   let result;
 
