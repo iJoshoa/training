@@ -1,14 +1,13 @@
-<div class="contrainer">
-  <div class="row">
-    <div class="col-lg-4" *ngFor="let data of dataDB">
-      <div class="card" style="margin-bottom: 1em;">
-        <img src="{{ imgSrc}}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">{{ data.student_code}}</h5>
-          <p class="card-text">{{data.firstname }} {{data.lastname}}</p>
-          <a href="#" class="btn btn-danger">More</a>
+
+<div class="container">
+  <div *ngFor="let data of dataset" class="row">
+      <div class="card" style="margin-bottom: 1em; width: 50rem;">
+          <img src="{{ data }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ data.url }}</h5>
+            <p class="card-text">{{ data }}</p>
+            <input class="form-control" type="text" placeholder="เพิ่มความคิดเห็น">
+          </div>
         </div>
-      </div>
-    </div>
   </div>
 </div>
