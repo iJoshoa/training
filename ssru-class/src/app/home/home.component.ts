@@ -9,7 +9,7 @@ import { DataService } from "../data.service";
 })
 export class HomeComponent implements OnInit {
   range = [1, 2, 3];
-  imgSrc =
+  url =
     "https://cn.i.cdn.ti-platform.com/cnapac/content/438/showpage/teen-titans-go%21/sa/showicon.png";
   dataset = [
     {
