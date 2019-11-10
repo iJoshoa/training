@@ -17,7 +17,7 @@ export class DataService {
   }
 
   getUsers() {
-    return this.http.get(`${this.hostname}/data`);
+    return this.http.get(`${this.hostname}/data/post`);
   }
 
   createUser(firstname: string, lastname: string, student_code: string)

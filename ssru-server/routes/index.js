@@ -9,6 +9,9 @@ var strConn = {
 }
 
 
+
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
@@ -24,6 +27,26 @@ router.get('/data', function(req, res, next) {
   let connection = mysql.createConnection(strConn);
   connection.connect();
   connection.query('SELECT * FROM students', function (error, results, fields) {
+    if (error) throw error;
+    dataset['result'] = {
+      'service': results
+    };
+  
+    connection.end();
+    
+    res.json(dataset);
+  });
+});
+
+router.get('/data/post', function(req, res, next) {
+  let dataset = {
+    name: 'Ada',
+    mobile: '091-9594945'
+  }
+
+  let connection = mysql.createConnection(strConn);
+  connection.connect();
+  connection.query('SELECT * FROM post', function (error, results, fields) {
     if (error) throw error;
     dataset['result'] = {
       'service': results

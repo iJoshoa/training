@@ -1,11 +1,14 @@
 
 <div class="container">
-  <div *ngFor="let data of dataset" class="row">
+
+
+  
+  <div *ngFor="let data of dataDB" class="row">
       <div class="card" style="margin-bottom: 1em; width: 50rem;">
-          <img src="{{ data }}" class="card-img-top" alt="...">
+          <img src="{{ data.url }}" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">{{ data.url }}</h5>
-            <p class="card-text">{{ data }}</p>
+          
+            <p class="card-text">{{ data.message }}</p>
             <input class="form-control" type="text" placeholder="เพิ่มความคิดเห็น">
           </div>
         </div>
