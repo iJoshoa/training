@@ -72,3 +72,6 @@ DEFAULT CHARACTER SET = utf16;
       <input class="form-control" style="margin-bottom: 1em" type="text" placeholder="URL รูปภาพ">
       <input class="form-control" style="margin-bottom: 1em" type="text" placeholder="ข้อความ">
   </div>
+
+  "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/popper.min.js"
