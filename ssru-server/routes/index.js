@@ -4,8 +4,8 @@ var router = express.Router();
 var strConn = {
   host     : 'localhost',
   user     : 'root',
-  password : 'logInmysql',
-  database : 'ssru_db'
+  password : '0085',
+  database : 'ssrudb'
 }
 
 
