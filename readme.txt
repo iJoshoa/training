@@ -66,3 +66,9 @@ CREATE TABLE `ssru_db`.`post` (
   PRIMARY KEY (`post_id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf16;
+==================================================
+ <div class="card" style="margin-bottom: 1em width: 50rem;">
+      <h2>POST</h2>
+      <input class="form-control" style="margin-bottom: 1em" type="text" placeholder="URL รูปภาพ">
+      <input class="form-control" style="margin-bottom: 1em" type="text" placeholder="ข้อความ">
+  </div>
