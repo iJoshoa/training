@@ -69,4 +69,37 @@ router.post('/data/create_user', function(req, res, next){
 });
 
 
+router.post('/data/post', function(req, res, next){
+  let body = req.body;
+  let url = body.url;
+  let message = body.message;
+  let like = body.like;
+
+  let strQuery = `INSERT post(url, message, like) VALUES('${url}', '${message}', '${like}')`;
+
+  let result;
+
+  let connection = mysql.createConnection(strConn);
+  connection.connect();
+  connection.query(strQuery, function (error, results, fields) {
+    if (error) {
+      result = {
+        status: '304 - Error',
+        error_msg: error
+      };
+    }
+    else {
+      result = {
+        status: '200 - ok',
+        body
+      }
+    }
+
+    res.json(result);
+  });
+
+  connection.end();
+
+});
+
 module.exports = router;
