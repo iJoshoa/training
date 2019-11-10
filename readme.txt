@@ -53,3 +53,16 @@ on web
 npm install mysql
 #install setvice
 ng g service Data
+
+
+###### hackatron #######
+
+--------create DB-----------
+CREATE TABLE `ssru_db`.`post` (
+  `post_id` INT NOT NULL AUTO_INCREMENT,
+  `url` VARCHAR(256) NOT NULL,
+  `message` VARCHAR(256) NOT NULL,
+  `like` INT NULL,
+  PRIMARY KEY (`post_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf16;
