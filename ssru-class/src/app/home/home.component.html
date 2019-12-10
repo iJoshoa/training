@@ -2,7 +2,16 @@
 <div class="container">
 
 
+    <div class="card" style="margin-bottom: 1em width: 50rem;">
+        <h2>POST</h2>
+        <input class="form-control" style="margin-bottom: 1em" type="text" placeholder="URL รูปภาพ">
+        <input class="form-control" style="margin-bottom: 1em" type="text" placeholder="ข้อความ">
   
+        <div class="btn btn-primary">POST
+  
+        </div>
+    </div>
+    <br>
   <div *ngFor="let data of dataDB" class="row">
       <div class="card" style="margin-bottom: 1em; width: 50rem;">
           <img src="{{ data.url }}" class="card-img-top" alt="...">
@@ -13,4 +22,11 @@
           </div>
         </div>
   </div>
+
+
+
+
+  <br>
+  <br>
 </div>
+
